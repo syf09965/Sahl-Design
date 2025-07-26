@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ساهل دزاين | Sahl Design</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+    
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background-color: #f8f5ee;
+    }
+    
+    .hero-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ec9d38' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    
+    .nav-link {
+      position: relative;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      right: 0;
+      background-color: #7C230F;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(124, 35, 15, 0.15);
+    }
+    
+    .price-card:hover {
+      transform: scale(1.03);
+    }
+    
+    .floating-btn {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body class="text-[#7C230F]">
+  <!-- Navigation -->
+  <nav class="hero-pattern sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 rounded-full bg-[#7C230F] flex items-center justify-center text-white font-bold text-xl">SD</div>
+          <span class="text-xl font-bold hidden md:block">ساهل دزاين</span>
+        </div>
+        
+        <div class="hidden md:flex space-x-8">
+          <a href="#about" class="nav-link font-medium">عننا</a>
+          <a href="#services" class="nav-link font-medium">خدماتنا</a>
+          <a href="#pricing" class="nav-link font-medium">الباقات</a>
+          <a href="#contact" class="nav-link font-medium">تواصل</a>
+        </div>
+        
+        <button id="mobile-menu-button" class="md:hidden text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+        <a href="#about" class="block py-2 px-4 hover:bg-[#EC9D38]/10 rounded">عننا</a>
+        <a href="#services" class="block py-2 px-4 hover:bg-[#EC9D38]/10 rounded">خدماتنا</a>
+        <a href="#pricing" class="block py-2 px-4 hover:bg-[#EC9D38]/10 rounded">الباقات</a>
+        <a href="#contact" class="block py-2 px-4 hover:bg-[#EC9D38]/10 rounded">تواصل</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-pattern py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">ساهل دزاين</h1>
+          <p class="text-xl mb-6">استوديو تصميم جرافيكي سوداني الهوية، يجمع بين البساطة والاحترافية</p>
+          <div class="flex space-x-4">
+            <a href="#contact" class="bg-[#7C230F] text-white px-6 py-2 rounded-full hover:bg-[#5a1a0b] transition">تواصل معنا</a>
+            <a href="#services" class="border border-[#7C230F] text-[#7C230F] px-6 py-2 rounded-full hover:bg-[#7C230F]/10 transition">خدماتنا</a>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center fade-in">
+          <div class="relative">
+            <div class="w-64 h-64 md:w-80 md:h-80 bg-[#EC9D38] rounded-full flex items-center justify-center floating-btn">
+              <div class="w-56 h-56 md:w-72 md:h-72 bg-[#7C230F] rounded-full flex items-center justify-center">
+                <div class="w-48 h-48 md:w-64 md:h-64 bg-[#F5F0E6] rounded-full flex items-center justify-center">
+                  <span class="text-3xl md:text-4xl font-bold text-center px-4">تصميم بحدّة<br>الفكرة</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">من نحن</h2>
+        <div class="w-20 h-1 bg-[#EC9D38] mx-auto"></div>
+      </div>
+      
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-1/2">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sudanese Design" class="rounded-lg shadow-lg w-full h-auto">
+        </div>
+        
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-semibold mb-4">استوديو تصميم جرافيكي سوداني الهوية</h3>
+          <p class="mb-4">مقرنا في <span class="font-bold">حفر الباطن – السعودية</span>، وجذورنا سودانية أصيلة. نقدم تصاميم حديثة تحمل روح التراث السوداني الأصيل.</p>
+          
+          <div class="bg-[#F5F0E6] p-4 rounded-lg mb-4">
+            <h4 class="font-bold mb-2">الرؤية:</h4>
+            <p>أن نكون الوجهة الأولى للتصميم الإبداعي البسيط الذي يعكس الهوية السودانية مع جودة عالمية.</p>
+          </div>
+          
+          <div class="bg-[#F5F0E6] p-4 rounded-lg">
+            <h4 class="font-bold mb-2">الرسالة:</h4>
+            <p>نبسّط الأفكار ونحوّلها إلى تصاميم واضحة وجذابة تعبّر عنك وتخدم أهدافك.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Personality -->
+  <section id="personality" class="py-12 bg-[#F5F0E6]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">شخصية البراند</h2>
+        <div class="w-20 h-1 bg-[#EC9D38] mx-auto"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <!-- Personality Card 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="text-3xl text-[#EC9D38] mb-3"><i class="fas fa-sun"></i></div>
+          <h3 class="font-bold mb-2">ودود</h3>
+          <p>لغة بسيطة وقريبة من القلب</p>
+        </div>
+        
+        <!-- Personality Card 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="text-3xl text-[#EC9D38] mb-3"><i class="fas fa-handshake"></i></div>
+          <h3 class="font-bold mb-2">صادق</h3>
+          <p>نعد بما نستطيع تحقيقه فقط</p>
+        </div>
+        
+        <!-- Personality Card 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="text-3xl text-[#EC9D38] mb-3"><i class="fas fa-brain"></i></div>
+          <h3 class="font-bold mb-2">ذكي</h3>
+          <p>نفهم الفكرة ونوصل الرسالة بوضوح</p>
+        </div>
+        
+        <!-- Personality Card 4 -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="text-3xl text-[#EC9D38] mb-3"><i class="fas fa-globe-africa"></i></div>
+          <h3 class="font-bold mb-2">محلي عالمي</h3>
+          <p>روح السودان مع احترافية السوق الدولي</p>
+        </div>
+        
+        <!-- Personality Card 5 -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="text-3xl text-[#EC9D38] mb-3"><i class="fas fa-bullseye"></i></div>
+          <h3 class="font-bold mb-2">عملي</h3>
+          <p>حلول واقعية بأسعار مناسبة وتأثير قوي</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual Identity -->
+  <section id="visual-identity" class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">الهوية البصرية</h2>
+        <div class="w-20 h-1 bg-[#EC9D38] mx-auto"></div>
+      </div>
+      
+      <div class="flex flex-col md:flex-row gap-8 items-center">
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-semibold mb-4">ألواننا</h3>
+          
+          <div class="flex flex-wrap gap-4 mb-6">
+            <!-- Color 1 -->
+            <div class="flex items-center">
+              <div class="w-16 h-16 rounded-full bg-[#7C230F] mr-3"></div>
+              <div>
+                <p class="font-bold">أحمر طيني</p>
+                <p class="text-sm">#7C230F</p>
+              </div>
+            </div>
+            
+            <!-- Color 2 -->
+            <div class="flex items-center">
+              <div class="w-16 h-16 rounded-full bg-[#EC9D38] mr-3"></div>
+              <div>
+                <p class="font-bold">ذهبي ترابي</p>
+                <p class="text-sm">#EC9D38</p>
+              </div>
+            </div>
+            
+            <!-- Color 3 -->
+            <div class="flex items-center">
+              <div class="w-16 h-16 rounded-full bg-[#F5F0E6] border border-gray-200 mr-3"></div>
+              <div>
+                <p class="font-bold">عاجي رملي</p>
+                <p class="text-sm">#F5F0E6</p>
+              </div>
+            </div>
+          </div>
+          
+          <h3 class="text-2xl font-semibold mb-4">الخطوط</h3>
+          <div class="mb-6">
+            <p class="font-bold mb-2">بالعربية:</p>
+            <p class="text-xl" style="font-family: 'Tajawal'">خط بيان أو كوفي بسيط</p>
+          </div>
+          <div>
+            <p class="font-bold mb-2">بالإنجليزية:</p>
+            <p class="text-xl" style="font-family: 'Montserrat'">Montserrat أو Poppins</p>
+          </div>
+        </div>
+        
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-semibold mb-4">الشعار</h3>
+          <div class="flex justify-center">
+            <div class="relative">
+              <div class="w-64 h-64 bg-[#F5F0E6] rounded-full flex items-center justify-center shadow-lg">
+                <div class="w-48 h-48 bg-[#7C230F] rounded-full flex items-center justify-center">
+                  <div class="w-32 h-32 bg-[#EC9D38] rounded-full flex flex-col items-center justify-center">
+                    <div class="text-white text-4xl font-bold mb-2">SD</div>
+                    <div class="text-white text-sm">ساهل دزاين</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-12 bg-[#F5F0E6]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">خدماتنا</h2>
+        <div class="w-20 h-1 bg-[#EC9D38] mx-auto"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Service 1 -->
+        <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+          <div class="text-3xl text-[#7C230F] mb-4"><i class="fas fa-palette"></i></div>
+          <h3 class="text-xl font-bold mb-3">تصميم هوية بصرية</h3>
+          <p>شعار، ألوان، خطوط، دليل براند متكامل يعبر عن شخصيتك</p>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+          <div class="text-3xl text-[#7C230F] mb-4"><i class="fas fa-building"></i></div>
+          <h3 class="text-xl font-bold mb-3">بروفايلات شركات</h3>
+          <p>تصميم بروفايل احترافي يعكس قيم مؤسستك وخدماتها</p>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+          <div class="text-3xl text-[#7C230F] mb-4"><i class="fas fa-hashtag"></i></div>
+          <h3 class="text-xl font-bold mb-3">محتوى سوشيال ميديا</h3>
+          <p>بوستات، قوالب، فيديوهات قصيرة جذابة لوسائل التواصل</p>
+        </div>
+        
+        <!-- Service 4 -->
+        <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+          <div class="text-3xl text-[#7C230F] mb-4"><i class="fas fa-lightbulb"></i></div>
+          <h3 class="text-xl font-bold mb-3">استشارات تصميمية</h3>
+          <p>توجيه بصري واستشارات لتحسين هويتك البصرية</p>
+        </div>
+        
+        <!-- Service 5 -->
+        <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+          <div class="text-3xl text-[#7C230F] mb-4"><i class="fas fa-file-alt"></i></div>
+          <h3 class="text-xl font-bold mb-3">منتجات رقمية</h3>
+          <p>قوالب وتصاميم جاهزة لتسهيل عملك</p>
+        </div>
+        
+        <!-- Service 6 -->
+        <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+          <div class="text-3xl text-[#7C230F] mb-4"><i class="fas fa-rocket"></i></div>
+          <h3 class="text-xl font-bold mb-3">للمشاريع الناشئة</h3>
+          <p>حلول تصميمية سريعة وبأسعار مناسبة للشركات الناشئة</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">باقات الأسعار</h2>
+        <div class="w-20 h-1 bg-[#EC9D38] mx-auto"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Price Card 1 -->
+        <div class="price-card bg-[#F5F0E6] p-6 rounded-lg shadow-md border-t-4 border-[#EC9D38] transition duration-300">
+          <h3 class="text-xl font-bold mb-4 text-center">أفراد / طلاب</h3>
+          <div class="text-3xl font-bold text-center mb-4">500 - 750 ﷼</div>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#7C230F] mt-1 mr-2"></i>
+              <span>شعار احترافي</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#7C230F] mt-1 mr-2"></i>
+              <span>كرت عمل</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#7C230F] mt-1 mr-2"></i>
+              <span>بوست تعريف</span>
+            </li>
+          </ul>
+          <div class="text-center">
+            <a href="#contact" class="inline-block bg-[#7C230F] text-white px-6 py-2 rounded-full hover:bg-[#5a1a0b] transition">اطلب الآن</a>
+          </div>
+        </div>
+        
+        <!-- Price Card 2 -->
+        <div class="price-card bg-[#F5F0E6] p-6 rounded-lg shadow-md border-t-4 border-[#7C230F] transition duration-300">
+          <h3 class="text-xl font-bold mb-4 text-center">مشاريع ناشئة</h3>
+          <div class="text-3xl font-bold text-center mb-4">1,500 - 2,000 ﷼</div>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#7C230F] mt-1 mr-2"></i>
+              <span>هوية بصرية كاملة</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#7C230F] mt-1 mr-2"></i>
+              <span>10 بوستات جاهزة</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#7C230F] mt-1 mr-2"></i>
+              <span>قالب تصميم</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#7C230F] mt-1 mr-2"></i>
+              <span>كرت عمل</span>
+            </li>
+          </ul>
+          <div class="text-center">
+            <a href="#contact" class="inline-block bg-[#7C230F] text-white px-6 py-2 rounded-full hover:bg-[#5a1a0b] transition">اطلب الآن</a>
+          </div>
+        </div>
+        
+        <!-- Price Card 3 -->
+        <div class="price-card bg-[#F5F0E6] p-6 rounded-lg shadow-md border-t-4 border-[#EC9D38] transition duration-300">
+          <h3 class="text-xl font-bold mb-4 text-center">شركات ومؤسسات</h3>
+          <div class="text-3xl font-bold text-center mb-4">3,000 - 4,500 ﷼</div>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#7C230F] mt-1 mr-2"></i>
+              <span>بروفايل احترافي</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#7C230F] mt-1 mr-2"></i>
+              <span>هوية بصرية كاملة</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#7C230F] mt-1 mr-2"></i>
+              <span>محتوى سوشيال كبير</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#7C230F] mt-1 mr-2"></i>
+              <span>دليل براند</span>
+            </li>
+          </ul>
+          <div class="text-center">
+            <a href="#contact" class="inline-block bg-[#7C230F] text-white px-6 py-2 rounded-full hover:bg-[#5a1a0b] transition">اطلب الآن</a>
+          </div>
+        </div>
+        
+        <!-- Price Card 4 -->
+        <div class="price-card bg-[#F5F0E6] p-6 rounded-lg shadow-md border-t-4 border-[#7C230F] transition duration-300">
+          <h3 class="text-xl font-bold mb-4 text-center">خدمات سريعة</h3>
+          <div class="text-3xl font-bold text-center mb-4">150 - 300 ﷼</div>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#7C230F] mt-1 mr-2"></i>
+              <span>تصميم بوست واحد</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#7C230F] mt-1 mr-2"></i>
+              <span>كرت عمل</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#7C230F] mt-1 mr-2"></i>
+              <span>تعديل بسيط</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[#7C230F] mt-1 mr-2"></i>
+              <span>تصميم سريع</span>
+            </li>
+          </ul>
+          <div class="text-center">
+            <a href="#contact" class="inline-block bg-[#7C230F] text-white px-6 py-2 rounded-full hover:bg-[#5a1a0b] transition">اطلب الآن</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slogans Section -->
+  <section id="slogans" class="py-12 bg-[#7C230F] text-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">شعارات البراند</h2>
+        <div class="w-20 h-1 bg-[#EC9D38] mx-auto"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-[#5a1a0b] p-6 rounded-lg">
+          <p class="text-xl font-bold text-center">شغل ساهل.. تأثير كبير</p>
+        </div>
+        <div class="bg-[#5a1a0b] p-6 rounded-lg">
+          <p class="text-xl font-bold text-center">Simple. Smart. Sudanese.</p>
+        </div>
+        <div class="bg-[#5a1a0b] p-6 rounded-lg">
+          <p class="text-xl font-bold text-center">تصميم بحدّة الفكرة</p>
+        </div>
+        <div class="bg-[#5a1a0b] p-6 rounded-lg">
+          <p class="text-xl font-bold text-center">Design Made Easy, Impact Made Loud</p>
+        </div>
+        <div class="bg-[#5a1a0b] p-6 rounded-lg">
+          <p class="text-xl font-bold text-center">ساهل دزاين | Designs that Feel Like Home</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Section -->
+  <section id="founder" class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">عن المؤسس</h2>
+        <div class="w-20 h-1 bg-[#EC9D38] mx-auto"></div>
+      </div>
+      
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-1/3 flex justify-center">
+          <div class="w-64 h-64 rounded-full bg-[#F5F0E6] border-4 border-[#EC9D38] overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" alt="المؤسس سيف الرحمن فضل الله" class="w-full h-full object-cover">
+          </div>
+        </div>
+        
+        <div class="md:w-2/3">
+          <h3 class="text-2xl font-bold mb-4">سيف الرحمن فضل الله</h3>
+          <p class="mb-4">مصمم سوداني بخبرة تزيد على 5 سنوات في التصميم الجرافيكي وبناء الهويات البصرية، يؤمن بأن البساطة سر الجمال والتأثير.</p>
+          
+          <div class="bg-[#F5F0E6] p-4 rounded-lg border-r-4 border-[#EC9D38]">
+            <p class="italic text-lg">"التصميم ما لازم يكون معقد عشان يكون جميل وشغال... الجمال مرات في البساطة وفي الروح اللي وراه."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-12 bg-[#F5F0E6]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">تواصل معنا</h2>
+        <div class="w-20 h-1 bg-[#EC9D38] mx-auto"></div>
+      </div>
+      
+      <div class="flex flex-col md:flex-row gap-8">
+        <div class="md:w-1/2">
+          <form class="space-y-4">
+            <div>
+              <label for="name" class="block mb-1 font-medium">الاسم</label>
+              <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#EC9D38]">
+            </div>
+            
+            <div>
+              <label for="email" class="block mb-1 font-medium">البريد الإلكتروني</label>
+              <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#EC9D38]">
+            </div>
+            
+            <div>
+              <label for="subject" class="block mb-1 font-medium">الموضوع</label>
+              <select id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#EC9D38]">
+                <option value="">اختر الموضوع</option>
+                <option value="design">طلب تصميم</option>
+                <option value="consultation">استشارة تصميمية</option>
+                <option value="other">استفسار آخر</option>
+              </select>
+            </div>
+            
+            <div>
+              <label for="message" class="block mb-1 font-medium">الرسالة</label>
+              <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#EC9D38]"></textarea>
+            </div>
+            
+            <button type="submit" class="bg-[#7C230F] text-white px-6 py-2 rounded-full hover:bg-[#5a1a0b] transition w-full md:w-auto">إرسال الرسالة</button>
+          </form>
+        </div>
+        
+        <div class="md:w-1/2">
+          <div class="bg-white p-6 rounded-lg shadow-md h-full">
+            <h3 class="text-xl font-bold mb-4">وسائل التواصل</h3>
+            
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <div class="text-2xl text-[#EC9D38] mr-3"><i class="fas fa-globe"></i></div>
+                <div>
+                  <p class="font-bold">الموقع الإلكتروني</p>
+                  <a href="http://www.sahldesign.com" target="_blank" class="text-[#7C230F] hover:underline">www.sahldesign.com</a>
+                </div>
+              </li>
+              
+              <li class="flex items-start">
+                <div class="text-2xl text-[#EC9D38] mr-3"><i class="fab fa-instagram"></i></div>
+                <div>
+                  <p class="font-bold">إنستغرام</p>
+                  <a href="https://instagram.com/sahldesign.sd" target="_blank" class="text-[#7C230F] hover:underline">@sahldesign.sd</a>
+                </div>
+              </li>
+              
+              <li class="flex items-start">
+                <div class="text-2xl text-[#EC9D38] mr-3"><i class="fab fa-facebook"></i></div>
+                <div>
+                  <p class="font-bold">فيسبوك</p>
+                  <a href="https://facebook.com/sahldesign.sd" target="_blank" class="text-[#7C230F] hover:underline">@sahldesign.sd</a>
+                </div>
+              </li>
+              
+              <li class="flex items-start">
+                <div class="text-2xl text-[#EC9D38] mr-3"><i class="fab fa-tiktok"></i></div>
+                <div>
+                  <p class="font-bold">تيك توك</p>
+                  <a href="https://tiktok.com/@sahldesign.sd" target="_blank" class="text-[#7C230F] hover:underline">@sahldesign.sd</a>
+                </div>
+              </li>
+              
+              <li class="flex items-start">
+                <div class="text-2xl text-[#EC9D38] mr-3"><i class="fab fa-behance"></i></div>
+                <div>
+                  <p class="font-bold">Behance</p>
+                  <a href="https://behance.net/sahldesign" target="_blank" class="text-[#7C230F] hover:underline">behance.net/sahldesign</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#7C230F] text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <div class="flex items-center space-x-2">
+            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#7C230F] font-bold">SD</div>
+            <span class="text-xl font-bold">ساهل دزاين</span>
+          </div>
+          <p class="mt-2 text-sm">تصميم بحدّة الفكرة</p>
+        </div>
+        
+        <div class="flex space-x-4">
+          <a href="https://instagram.com/sahldesign.sd" target="_blank" class="text-2xl hover:text-[#EC9D38] transition"><i class="fab fa-instagram"></i></a>
+          <a href="https://facebook.com/sahldesign.sd" target="_blank" class="text-2xl hover:text-[#EC9D38] transition"><i class="fab fa-facebook"></i></a>
+          <a href="https://tiktok.com/@sahldesign.sd" target="_blank" class="text-2xl hover:text-[#EC9D38] transition"><i class="fab fa-tiktok"></i></a>
+          <a href="https://behance.net/sahldesign" target="_blank" class="text-2xl hover:text-[#EC9D38] transition"><i class="fab fa-behance"></i></a>
+        </div>
+      </div>
+      
+      <div class="border-t border-[#EC9D38]/30 mt-6 pt-6 text-center text-sm">
+        <p>© 2023 ساهل دزاين. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="fixed bottom-6 left-6 w-12 h-12 bg-[#EC9D38] text-white rounded-full shadow-lg flex items-center justify-center hidden">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Back to Top Button
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.remove('hidden');
+      } else {
+        backToTopButton.classList.add('hidden');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+        
+        // Close mobile menu if open
+        mobileMenu.classList.add('hidden');
+      });
+    });
+    
+    // Form submission
+    const contactForm = document.querySelector('form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('شكراً لتواصلك معنا! سنرد عليك في أقرب وقت ممكن.');
+        contactForm.reset();
+      });
+    }
+    
+    // Animation on scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const fadeInOnScroll = () => {
+      fadeElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementTop < windowHeight - 100) {
+          element.style.opacity = '1';
+        }
+      });
+    };
+    
+    // Set initial opacity
+    fadeElements.forEach(element => {
+      element.style.opacity = '0';
+    });
+    
+    window.addEventListener('scroll', fadeInOnScroll);
+    window.addEventListener('load', fadeInOnScroll);
+  </script>
+</body>
+</html>
